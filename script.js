@@ -6,7 +6,6 @@ $.ajax({
     url: selectCurrency,
     success: function (data) {
         let result = "";
-        console.log(data.symbols)
         for(let symbol in data.symbols){
             result += `<option value="${symbol}">${symbol}</option>`
         }
@@ -40,31 +39,3 @@ $("#exchangeBtn").click(function () {
     })
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// var myHeaders = new Headers();
-// myHeaders.append("apikey", "AxQD1IdIraJyfZrFMfnpwtZirHUvzjGj");
-
-// var requestOptions = {
-//   method: 'GET',
-//   redirect: 'follow',
-//   headers: myHeaders
-// };
-
-// fetch("https://api.apilayer.com/exchangerates_data/convert?to={to}&from={from}&amount={amount}", requestOptions)
-//   .then(response => response.text())
-//   .then(result => console.log(result))
-//   .catch(error => console.log('error', error));
